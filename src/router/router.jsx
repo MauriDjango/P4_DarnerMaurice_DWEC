@@ -1,85 +1,59 @@
-import {createBrowserRouter} from 'react-router-dom';
+import {createBrowserRouter, Outlet} from 'react-router-dom';
 
-import HomePage from '../pages/HomePage'
-import HeaderLayout from '../layouts/HeaderLayout'
-import FooterLayout from '../layouts/FooterLayout'
-import ProfileLayout from '../layouts/ProfileLayout'
-import ContactLayout from '../layouts/ContactLayout'
-import ErrorLayout from '../layouts/ErrorLayout'
-import LibraryLayout from '../layouts/LibraryLayout'
-import SuggestionsLayout from '../layouts/SuggestionsLayout'
-import NowPlayingFull from '../components/now_playing/NowPlayingFull'
-import Profile from '../components/profile/Profile'
-import Suggestions from '../components/suggestions/Suggestions'
-import NowPlayingMini from '../components/now_playing/NowPlayingMini'
-import Library from '../components/Library/Library'
-
+import HomePage from '../pages/HomePage';
+import HeaderLayout from '../layouts/HeaderLayout';
+import FooterLayout from '../layouts/FooterLayout';
+import ProfileLayout from '../layouts/ProfileLayout';
+import ContactLayout from '../layouts/ContactLayout';
+import ErrorLayout from '../layouts/ErrorLayout';
+import LibraryLayout from '../layouts/LibraryLayout';
+import SuggestionsLayout from '../layouts/SuggestionsLayout';
+import NowPlayingFull from '../components/now_playing/NowPlayingFull';
+import Profile from '../components/profile/Profile';
+import Suggestions from '../components/suggestions/Suggestions';
+import NowPlayingMini from '../components/now_playing/NowPlayingMini';
+import Library from '../components/Library/Library';
+import ContactLink from "../components/Contact/ContactLink";
+import ContactForm from "../components/Contact/ContactForm";
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />,
+    element: (
+        <>
+          <HeaderLayout />
+          <Outlet />
+          <FooterLayout />
+        </>
+    ),
     children: [
       {
-        element: <HeaderLayout />,
-      },
-      {
-        path: '/profile',
-        element: <ProfileLayout />,
+        element: <HomePage />,
         children: [
           {
-            element: <NowPlayingMini />
+            path: 'profile',
+            element: <ProfileLayout />
           },
           {
-            element: <Profile />
-          }
-        ]
-      },
-      {
-        path: '/contact',
-        element: <ContactLayout />,
-        children: [
-          {
-            element: <NowPlayingMini />
+            path: 'contact',
+            element: <ContactLayout />,
           },
           {
-            element: <Contact />
-          }
-        ]
-      },
-      {
-        path: '/error',
-        element: <ErrorLayout />
-      },
-      {
-        path: '/library',
-        element: <LibraryLayout />,
-        children: [
-          {
-            element: <NowPlayingMini />
+            path: 'error',
+            element: <ErrorLayout />
           },
           {
-            element: <Library />
-          }
-        ]
-      },
-      {
-        path: '/suggestions',
-        element: <SuggestionsLayout />,
-        children: [
-          {
-            element: <NowPlayingFull />
+            index: true,
+            element: <SuggestionsLayout />,
           },
           {
-            element: <Suggestions />
+            path: 'library',
+            element: <LibraryLayout />
           }
         ]
-      },
-      {
-        element: <FooterLayout />
       }
     ]
   }
-])
+]);
 
-export default router
+export default router;

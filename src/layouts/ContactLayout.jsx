@@ -1,12 +1,13 @@
-
+import NowPlayingMini from "../components/now_playing/NowPlayingMini";
+import ContactForm from "../components/Contact/ContactForm";
 
 
 const ContactLayout = () => {
   return (
-    <div>
-      <h1>Contact Layout</h1>
-    </div>
+      <section className={'main'}>
+        <NowPlayingMini />
+        <ContactForm />
+      </section>
   )
 }
-
 export default ContactLayout

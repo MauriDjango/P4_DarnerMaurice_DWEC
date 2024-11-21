@@ -3,7 +3,7 @@
 
 const NowPlayingMini = () => {
   return (
-    <div className="nowplaying-mini">
+    <div className="now-playing">
       <h2>Now Playing Mini</h2>
     </div>
   )

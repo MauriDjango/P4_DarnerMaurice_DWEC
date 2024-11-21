@@ -1,12 +1,12 @@
+import ContactLink from "../components/Contact/ContactLink";
+import TermsAndConditions from "../components/Footer/TermsAndConditions";
 
 
-
-const cssClassName = 'footer'
-
-const FooterLayout = ({children}) => {
+const FooterLayout = () => {
   return (
-    <div className={cssClassName}>
-      {children}
+    <div className={'footer'}>
+      <TermsAndConditions />
+      <ContactLink />
     </div>
   )
 }

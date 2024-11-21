@@ -1,12 +1,11 @@
 import react from 'react';
+import {Outlet} from "react-router-dom";
 
 
-const cssClassName = 'home'
-
-const HomePage = ({children}) => {
+const HomePage = () => {
   return (
-    <div className={cssClassName}>
-      {children}
+    <div className={'homepage'}>
+      <Outlet/>
     </div>
   )
 }

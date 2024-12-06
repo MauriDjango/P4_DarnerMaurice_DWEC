@@ -1,0 +1,280 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, monospace;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+#root {
+  height: 100%; /* Matches the height of its parent (body) */
+  display: flex; /* Optional: If you want to structure its child layout */
+  flex-direction: column; /* Optional: Sets a column layout */
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures the container fills the full height */
+}
+section {
+  height: 100%;
+  width: 100%;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+/* Footer -------------------------------------------------------------------------------------------------------------*/
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px; /* Set a fixed height */
+  padding: 1rem; /* Padding inside the footer */
+  background-color: #243533;
+}
+.footer__contact {
+
+}
+.footer__termsConditions {
+
+}
+/* Header -------------------------------------------------------------------------------------------------------------*/
+.header {
+  background-color: #243533;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 32px;
+}
+
+.logo__button {
+  background: none; /* Remove the default button background */
+  border: none; /* Remove default button border */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  cursor: pointer; /* Add pointer cursor to indicate interactivity */
+  display: inline-flex; /* Ensure the button wraps tightly around the image */
+  align-items: center; /* Center-align the image */
+  justify-content: center;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+.searchbar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Home Page ---------------------------------------------------------------------------------------------------------*/
+.homepage {
+  width: 100%;
+  height: 100%;
+}
+
+/* Contact Form ---------------------------------------------------------------------------------------------------------*/
+.section {
+  background-image: url("../public/img/texture.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Contact Form ---------------------------------------------------------------------------------------------------------*/
+.main form {
+  align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column
+}
+input {
+  border-radius: 25px;
+  padding: 5px;
+  background-color: #243533;
+}
+textarea {
+  border-radius: 25px;
+  padding: 5px;
+  background-color: #243533;
+  width: 90%;
+  height: 25%;
+}
+.form__submit {
+  border-radius: 25px;
+  margin: 20px;
+  padding: 5px;
+  background-color: #243533;
+  cursor: pointer;
+}
+form h1 {
+  margin: 10px 0;
+}
+form label {
+  margin: 10px 0;
+}
+.mask {
+  mask-image: url('../public/img/circle_mask.jpg');
+  mask-size: 50%; /* Resize the mask */
+  mask-repeat: no-repeat;
+  width: auto;
+  height: auto;
+}
+.error {
+  background-color: red;
+  font-size: 12px;
+  display: block;
+  padding: 5px;
+  width: 90%;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* Main ----------------------------------------------------------------------------------------------------------------*/
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #333332;
+}
+
+/* Loader --------------------------------------------------------------------------------------------------------------*/
+.loader {
+  width: 82px;
+  height: 18px;
+  position: relative;
+}
+.loader::before , .loader::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50% , 10%);
+  top: 0;
+  background: #FF3D00;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  animation: jump 0.5s ease-in infinite alternate;
+}
+
+.loader::after {
+  background: #0000;
+  color: #fff;
+  top: 100%;
+  box-shadow: 32px -20px , -32px -20px;
+  animation: split 0.5s ease-out infinite alternate;
+}
+
+@keyframes split {
+  0% { box-shadow: 8px -20px, -8px -20px}
+  100% { box-shadow: 32px -20px , -32px -20px}
+}
+@keyframes jump {
+  0% { transform: translate(-50% , -150%)}
+  100% { transform: translate(-50% , 10%)}
+}
+
+/* Player --------------------------------------------------------------------------------------------------------------*/
+
+.artist__photo {
+  display: flex;
+  min-height: 300px;
+  max-height: 600px;
+  padding: 16px 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background: url('../public/img/flower_boy.jpeg') lightgray 50% / cover no-repeat;
+}
+
+.player_full {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-width: 220px;
+  max-width: 300px;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  background: #4D6864;
+}
+
+.controls {
+  display: flex;
+  padding: 16px 24px;
+  height: 150px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  align-self: stretch;
+}
+.controls__buttons {
+  display: flex;
+  height: 20px;
+  min-width: 120px;
+  max-width: 300px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+.player__artist {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-width: 220px;
+  max-width: 300px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.queue {
+  display: flex;
+  min-height: 300px;
+  padding: 10px 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+  background: #2C423F;
+}

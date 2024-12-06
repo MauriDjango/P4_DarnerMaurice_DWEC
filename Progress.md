@@ -1,6 +1,6 @@
 # Project Progress: Contact Form Structure Implementation
 
-## A. Overview of the Implementation So Far
+## First Stage—Overview of the Implementation
 
 The contact form is designed to enable users to communicate effectively with the application. To achieve this, we have 
 developed key structures that ensure functionality, validation, and an intuitive user experience. These structures not 
@@ -11,7 +11,7 @@ and adaptable for future improvements.
 
 ---
 
-## B. Implemented Features
+## 2. Implemented Features
 
 ### 1. **Form Structure**
 
@@ -31,7 +31,7 @@ Both states are automatically updated as users interact with the form.
 
 ### 3. **Validation System**
 
-Validation is performed using utility functions defined in an external file (`utils.js`). These functions ensure that 
+Validation is performed using utility functions defined in an external file (`validation.js`). These functions ensure that 
 input meets specific criteria:
 - **Name Validation**: Checks for invalid characters.
 - **Email Validation**: Verifies the format of the email address.
@@ -70,3 +70,9 @@ A snippet from the form demonstrates how dynamic error handling works:
     placeholder="Enter your name"
 />
 {errors.name && <span className="error">Invalid Name</span>}
+```
+
+## Sceond Stage—Overview of the Implementation
+
+
+

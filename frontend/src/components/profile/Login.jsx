@@ -1,7 +1,6 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { auth } from '../../api/spotify_api/AuthApi'
 import { spotify } from '../../api/spotify_api/SpotifyApi'
 
 
@@ -45,7 +44,7 @@ const Login = () => {
       >
         {({ isSubmitting }) => (
           <Form className="section">
-            <h1>Contact Us</h1>
+            <h1>Login</h1>
             <img src={'/img/logo.svg'} alt="App logo" />
 
             {/* Email Input Field */}
@@ -74,7 +73,7 @@ const Login = () => {
               type="submit"
               disabled={isSubmitting}
             >
-              Send
+              Login
             </button>
           </Form>
         )}

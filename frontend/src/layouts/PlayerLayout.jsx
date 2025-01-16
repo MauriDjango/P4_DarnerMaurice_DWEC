@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { PlayerContext } from '../context/PlayerContext'
-import PlayerFullLayout from '../components/Player/PlayerFullLayout'
-import PlayerMiniLayout from "../components/Player/PlayerMiniLayout";
+import PlayerFullLayout from '../components/Player/full/PlayerFullLayout'
+import PlayerMiniLayout from "../components/Player/mini/PlayerMiniLayout";
 
 
 const PlayerLayout = () => {

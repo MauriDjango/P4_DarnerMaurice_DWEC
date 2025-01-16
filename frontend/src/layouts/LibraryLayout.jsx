@@ -1,11 +1,14 @@
-
-
+import NavBar from '../components/main/NavBar';
+import Library from '../components/Library/Library';
 
 const LibraryLayout = () => {
   return (
-    <div>
-      <h1>Library Layout</h1>
-    </div>
+    <section className={'library-layout'}>
+      <NavBar
+        view='library'
+      />
+      <Library />
+    </section>
   )
 }
 

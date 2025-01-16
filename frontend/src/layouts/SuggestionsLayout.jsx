@@ -1,12 +1,13 @@
-import PlayerFullLayout from '../components/Player/PlayerFullLayout'
+import PlayerFullLayout from '../components/Player/full/PlayerFullLayout'
 import Suggestions from '../components/suggestions/Suggestions'
+import NavBar from '../components/main/NavBar';
 
 
 const SuggestionsLayout = () => {
   return (
     <section className={'main'}>
-      <PlayerFullLayout />
       <Suggestions />
+      <NavBar />
     </section>
   )
 }

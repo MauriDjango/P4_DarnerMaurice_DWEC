@@ -132,6 +132,27 @@ app.get('/api/spotify/player/queue', async (
   }
 })
 
+app.get('/api/spotify/me/playlists', async (req, res) => {
+  const { accessToken } = req.query;
+  console.log('Server Fetching user playlists');
+
+  const playlistsUrl = 'https://api.spotify.com/v1/me/playlists'; // Correct Spotify API endpoint for user playlists
+
+  try {
+    const response = await axios.get(playlistsUrl, {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    });
+    res.json(response.data);
+  } catch (error) {
+    console.error('Error fetching playlists:', error);
+    res.status(error.response ? error.response.status : 500).json({ error: 'Error fetching playlists' });
+  }
+});
+
+
+
+
+
 // Start server with http
 http.createServer(options, app).listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

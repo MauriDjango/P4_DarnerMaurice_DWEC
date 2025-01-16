@@ -1,6 +1,6 @@
-import Artist from './children/Artist'
-import Queue from './children/queue/Queue'
-import ControlsLayout from '../../layouts/ControlsLayout'
+import Artist from './Artist'
+import Queue from './queue/Queue'
+import ControlsLayout from '../../../layouts/ControlsLayout'
 
 const PlayerFullLayout = () => {
   

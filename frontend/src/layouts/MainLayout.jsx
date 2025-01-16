@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom'
 
-const MainLayout = () => {
+const MainLayout = ({children}) => {
   return (
     <section className={'main'}>
-      <Outlet />
+      {children}
     </section>
   )
 }

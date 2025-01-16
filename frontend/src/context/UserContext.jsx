@@ -9,14 +9,14 @@ export const UserProvider = ({ children }) => {
     tokenType: null,
     expiresIn: null
   }
+
   const initialUserData = {
     authentication: authentication,
-    userProfile: null
+    userProfile: {}
   }
 
   const [userData, setUserData] = useState(initialUserData)
   const [hasLoaded, setHasLoaded] = useState(false)
-
 
   return (
     <UserContext.Provider value={{userData, setUserData, hasLoaded, setHasLoaded}}>

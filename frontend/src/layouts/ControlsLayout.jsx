@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { CurrentArtistContext } from '../context/CurrentArtistContext'
-import ControlButtons from '../components/Player/children/controls/ControlButtons'
+import ControlButtons from '../components/Player/full/controls/ControlButtons'
 
 const ControlsLayout = () => {
 

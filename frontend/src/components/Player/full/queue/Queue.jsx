@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react'
 import Song from './Song'
 import { PlayerContext } from '../../../../context/PlayerContext'
 
+
 const Queue = () => {
   const { queue } = useContext(PlayerContext)
 

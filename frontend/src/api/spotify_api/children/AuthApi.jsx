@@ -1,7 +1,8 @@
 import Utils from '../../../utils/utils'
 
-const clientId = process.env.REACT_APP_CLIENT_ID;
-const redirectUri = process.env.REACT_APP_REDIRECT_URI
+const clientId = import.meta.env.VITE_CLIENT_ID;
+const redirectUri = import.meta.env.VITE_REDIRECT_URI;
+
 
 class AuthApi {
   #clientId
